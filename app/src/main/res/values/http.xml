@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- http连接池属性  begin -->
+
+    <!-- 获取连接的最大等待时间 -->
+    <integer name="wati_time_out">60000</integer>
+
+    <!--每个路由最大连接数-->
+    <integer name="max_route_connections">800</integer>
+
+    <!--连接超时时间-->
+    <integer name="connect_time_out">10000</integer>
+
+    <!--读取时间-->
+    <integer name="read_time_out">10000</integer>
+
+    <!-- 最大连接数 -->
+    <integer name="max_total_connections">8</integer>
+
+    <!-- http连接池属性  end -->
+</resources>

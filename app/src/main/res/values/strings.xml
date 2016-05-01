@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NewsClient</string>
+    <string name="test_url">http://118.244.212.82:9092/newsClient/news_list</string>
+    <string name="ver">1</string>
+    <string name="subid">1</string>
+    <string name="dir">1</string>
+    <string name="nid">1</string>
+    <string name="stamp">20140321</string>
+    <string name="cnt">20</string>
+</resources>
