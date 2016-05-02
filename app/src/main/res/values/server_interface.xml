@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 连接主机字串 -->
+    <string name="interface_url">http://118.244.212.82:9092/newsClient/</string>
+
+    <!--新闻清单 begin -->
+    <string name="test_url">news_list</string>
+    <!--测试参数 -->
+    <string name="p_ver">1</string>
+    <string name="p_subid">1</string>
+    <string name="p_dir">1</string>
+    <string name="p_nid">1</string>
+    <string name="p_stamp">20140321</string>
+    <string name="p_cnt">20</string>
+
+    <!--新闻清单 end -->
+
+    <!-- -->
+</resources>

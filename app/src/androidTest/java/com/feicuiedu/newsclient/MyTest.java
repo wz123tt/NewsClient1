@@ -149,9 +149,9 @@ public class MyTest extends AndroidTestCase {
 
         String strUrl = resources.getString(R.string.test_url);
 
-        String param = "?ver="+resources.getString(R.string.ver)+"&subid="+resources.getString(R.string.subid)
-                +"&dir="+resources.getString(R.string.dir)+"&nid="+resources.getString(R.string.nid)
-                +"&stamp="+resources.getString(R.string.stamp)+"&cnt="+resources.getString(R.string.cnt);
+        String param = "?ver="+resources.getString(R.string.p_ver)+"&subid="+resources.getString(R.string.p_subid)
+                +"&dir="+resources.getString(R.string.p_dir)+"&nid="+resources.getString(R.string.p_nid)
+                +"&stamp="+resources.getString(R.string.p_stamp)+"&cnt="+resources.getString(R.string.p_cnt);
 
         strUrl += param;
 
@@ -178,12 +178,12 @@ public class MyTest extends AndroidTestCase {
 
         String strUrl = resources.getString(R.string.test_url);
 
-        BasicNameValuePair ver = new BasicNameValuePair("ver", resources.getString(R.string.ver));
-        BasicNameValuePair subid = new BasicNameValuePair("subid", resources.getString(R.string.subid));
-        BasicNameValuePair dir = new BasicNameValuePair("dir", resources.getString(R.string.dir));
-        BasicNameValuePair nid = new BasicNameValuePair("nid", resources.getString(R.string.nid));
-        BasicNameValuePair stamp = new BasicNameValuePair("stamp", resources.getString(R.string.stamp));
-        BasicNameValuePair cnt = new BasicNameValuePair("cnt", resources.getString(R.string.cnt));
+        BasicNameValuePair ver = new BasicNameValuePair("ver", resources.getString(R.string.p_ver));
+        BasicNameValuePair subid = new BasicNameValuePair("subid", resources.getString(R.string.p_subid));
+        BasicNameValuePair dir = new BasicNameValuePair("dir", resources.getString(R.string.p_dir));
+        BasicNameValuePair nid = new BasicNameValuePair("nid", resources.getString(R.string.p_nid));
+        BasicNameValuePair stamp = new BasicNameValuePair("stamp", resources.getString(R.string.p_stamp));
+        BasicNameValuePair cnt = new BasicNameValuePair("cnt", resources.getString(R.string.p_cnt));
 
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(ver);
@@ -227,9 +227,9 @@ public class MyTest extends AndroidTestCase {
 
             String strUrl = resources.getString(R.string.test_url);
 
-            String param = "?ver="+resources.getString(R.string.ver)+"&subid="+resources.getString(R.string.subid)
-                    +"&dir="+resources.getString(R.string.dir)+"&nid="+resources.getString(R.string.nid)
-                    +"&stamp="+resources.getString(R.string.stamp)+"&cnt="+resources.getString(R.string.cnt);
+            String param = "?ver="+resources.getString(R.string.p_ver)+"&subid="+resources.getString(R.string.p_subid)
+                    +"&dir="+resources.getString(R.string.p_dir)+"&nid="+resources.getString(R.string.p_nid)
+                    +"&stamp="+resources.getString(R.string.p_stamp)+"&cnt="+resources.getString(R.string.p_cnt);
 
             strUrl += param;
 
@@ -276,9 +276,9 @@ public class MyTest extends AndroidTestCase {
 
             String strUrl = resources.getString(R.string.test_url);
 
-            String param = "ver="+resources.getString(R.string.ver)+"&subid="+resources.getString(R.string.subid)
-                    +"&dir="+resources.getString(R.string.dir)+"&nid="+resources.getString(R.string.nid)
-                    +"&stamp="+resources.getString(R.string.stamp)+"&cnt="+resources.getString(R.string.cnt);
+            String param = "ver="+resources.getString(R.string.p_ver)+"&subid="+resources.getString(R.string.p_subid)
+                    +"&dir="+resources.getString(R.string.p_dir)+"&nid="+resources.getString(R.string.p_nid)
+                    +"&stamp="+resources.getString(R.string.p_stamp)+"&cnt="+resources.getString(R.string.p_cnt);
 
             url = new URL(strUrl);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();

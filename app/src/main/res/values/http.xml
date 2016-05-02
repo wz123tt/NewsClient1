@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- http连接池属性  begin -->
 
     <!-- 获取连接的最大等待时间 -->
