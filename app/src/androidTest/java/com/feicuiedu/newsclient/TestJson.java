@@ -51,6 +51,7 @@ public class TestJson extends AndroidTestCase {
         Log.d(strTag, json);
 
         List<Map<String, String>> cityList = new ArrayList<Map<String, String>>();
+
         map = new HashMap<String, String>();
         map.put("name", "济南");
         cityList.add(map);
@@ -112,9 +113,9 @@ public class TestJson extends AndroidTestCase {
     public void testParseJsonStrGson() {
 
         Gson gson = new Gson();
-        Type type = new TypeToken< List<Object>>() {
+        Type type = new TypeToken< Object>() {
         }.getType();
-        List<Object> list = gson.fromJson(jsonStr, type);
+        List<Object> list = (List<Object>)gson.fromJson(jsonStr, type);
 
         for (Object obj : list) {
 

@@ -8,6 +8,7 @@ import android.util.Log;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -102,7 +103,7 @@ public class MyTest extends AndroidTestCase {
     }
 
 
-    // 测试取得HttpClent 5 以后被标识为经过时，但是仍然可以使用
+    // 测试取得HttpClient android 5 以后被标识为已过时，但是仍然可以使用
     private void initApacheHttpClient() {
 
 
@@ -116,6 +117,8 @@ public class MyTest extends AndroidTestCase {
         // 设置每个路由最大连接数
         ConnPerRouteBean connPerRoute = new ConnPerRouteBean(max_route_connections);
         ConnManagerParams.setMaxConnectionsPerRoute(httpParams, connPerRoute);
+
+
         // 设置连接超时时间
         HttpConnectionParams.setConnectionTimeout(httpParams, connect_time_out);
         // 设置读取超时时间
@@ -147,13 +150,14 @@ public class MyTest extends AndroidTestCase {
 
         }
 
-        String strUrl = resources.getString(R.string.test_url);
+        String strUrl = resources.getString(R.string.interface_url)+resources.getString(R.string.test_url);
 
         String param = "?ver="+resources.getString(R.string.p_ver)+"&subid="+resources.getString(R.string.p_subid)
                 +"&dir="+resources.getString(R.string.p_dir)+"&nid="+resources.getString(R.string.p_nid)
                 +"&stamp="+resources.getString(R.string.p_stamp)+"&cnt="+resources.getString(R.string.p_cnt);
 
         strUrl += param;
+        Log.d("strUrl",strUrl);
 
         HttpGet httpGet=new HttpGet(strUrl);
         HttpResponse response= null;
@@ -176,7 +180,7 @@ public class MyTest extends AndroidTestCase {
             initApacheHttpClient();
         }
 
-        String strUrl = resources.getString(R.string.test_url);
+        String strUrl = resources.getString(R.string.interface_url)+resources.getString(R.string.test_url);
 
         BasicNameValuePair ver = new BasicNameValuePair("ver", resources.getString(R.string.p_ver));
         BasicNameValuePair subid = new BasicNameValuePair("subid", resources.getString(R.string.p_subid));
@@ -200,7 +204,7 @@ public class MyTest extends AndroidTestCase {
             entity = new UrlEncodedFormEntity(params,"UTF-8");
             httpPost.setEntity(entity);
             HttpResponse httpResponse =  httpClient.execute(httpPost);
-            if (httpResponse.getStatusLine().getStatusCode() == 200) {
+            if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 HttpEntity entity2 = httpResponse.getEntity();
                 resultStr = EntityUtils.toString(entity2, "utf-8");
             }
@@ -225,7 +229,7 @@ public class MyTest extends AndroidTestCase {
         URL url = null;
         try {
 
-            String strUrl = resources.getString(R.string.test_url);
+            String strUrl = resources.getString(R.string.interface_url)+resources.getString(R.string.test_url);
 
             String param = "?ver="+resources.getString(R.string.p_ver)+"&subid="+resources.getString(R.string.p_subid)
                     +"&dir="+resources.getString(R.string.p_dir)+"&nid="+resources.getString(R.string.p_nid)
@@ -274,7 +278,7 @@ public class MyTest extends AndroidTestCase {
         URL url = null;
         try {
 
-            String strUrl = resources.getString(R.string.test_url);
+            String strUrl = resources.getString(R.string.interface_url)+resources.getString(R.string.test_url);
 
             String param = "ver="+resources.getString(R.string.p_ver)+"&subid="+resources.getString(R.string.p_subid)
                     +"&dir="+resources.getString(R.string.p_dir)+"&nid="+resources.getString(R.string.p_nid)
@@ -288,7 +292,7 @@ public class MyTest extends AndroidTestCase {
             // 设置读取时间
             conn.setReadTimeout(read_time_out);
 
-            // 设置请求类型为Get类型
+            // 设置请求类型为Post类型
             conn.setRequestMethod("POST");
 
             //获取输出流
